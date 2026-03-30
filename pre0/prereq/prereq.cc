@@ -24,12 +24,21 @@ Result calculate(int ny, int nx, const float *data, int y0, int x0, int y1, int 
 	    {
 		    for (int y = y0; (y < y1) && (y1 <= ny); y++)
 		    {
-			    csum[c] += data[c + (3 * x) + (3 * nx * y)];
+			    int ba = (3 * x) + (3 * nx * y);
+			    csum[c] += data[ba + c];
 		    }
 	    }
     }
-    result.avg[0] = csum[0] / npixels; 
-    result.avg[1] = csum[1] / npixels;
-    result.avg[2] = csum[2] / npixels;
+    result.avg[0] = csum[0]/npixels; 
+    result.avg[1] = csum[1]/npixels;
+    result.avg[2] = csum[2]/npixels;
     return result;
 }
+
+
+/*
+ * Learnings:
+ * 1. Total pixels are not nx * ny. Its the length * breadth of the rectangle.
+ * 2. Operations should consider double in calculations and not just floats to cover all
+ * test cases.
+ * */
