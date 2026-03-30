@@ -29,7 +29,7 @@ Result calculate(int ny, int nx, const float *data, int y0, int x0, int y1, int 
 		    }
 	    }
     }
-    result.avg[0] = csum[0]/npixels; 
+    result.avg[0] = csum[0]/npixels;
     result.avg[1] = csum[1]/npixels;
     result.avg[2] = csum[2]/npixels;
     return result;
