@@ -54,5 +54,3 @@ dkms.conf
 # debug information files
 *.dwo
 
-# Ignore extracted contents from zip.
-prereq
