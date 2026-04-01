@@ -1,0 +1,40 @@
+# General instructions
+
+Goal : to calculate co-relation co-efficient between row-i and row-j of input matrix.
+Feedback - Math heavy problem. Can't understand what to do. Read the Hint but still
+feels math heavy.
+
+input format: a matrix
+
+ny: maximum rows
+nx: maximum cols
+
+
+How is data stored in a matrix cell ?
+OR
+How is 1 matrix element stored ?
+
+matrix[y][x];
+data = &matrix;
+
+data[x + y*nx];
+
+
+i and j : main iterattors
+0<= i <= j <= ny
+
+# operation
+result[i + j*ny] = corelation(row-i, row-j)
+
+# Memory: allocated but not initialized
+
+# Float precision
+input, result - single precision
+
+as per task, you might need to use double
+round the result to a single precision
+
+If task specifies single to be used, then use float.
+
+# Note
+numerical precision has to be high in a normal scenario.
